@@ -37,16 +37,12 @@
         overflow: hidden;
         text-align: center;
     }
-
+    .team-members .box:hover:before{
+        display: none;
+    }
     .team-members .box:hover .image-wrapper {
         padding: 0;
     }
-
-    /* .team-members .box:hover .social li a:hover {
-	background: #fff;
-	color:#1C77AD;
-    border: 1.40px solid #1C77AD;
-} */
 
     .image-wrapper {
         position: relative;
@@ -72,26 +68,6 @@
         position: relative;
     }
 
-    /* ul.social {
-        padding: 0;
-    }
-
-    ul.social li {
-        display: inline-block;
-        list-style-type: none;
-    } */
-
-    /* ul.social li a {
-        position: relative;
-        width: 36px;
-        height: 36px;
-        background-color: #1C77AD;
-        display: inline-block;
-        line-height: 36px;
-        border-radius: 50%;
-        color: #fff;
-        transition: all .5s ease;
-    } */
     .social {
         display: flex;
         flex-direction: column-reverse;
@@ -114,6 +90,13 @@
         color: #1C77AD;
         font-weight: 500;
     }
+
+    .team-members .box:hover h5, .team-members .box:hover p{
+  color: #44424a;
+}
+.team-members .box:hover .social p:first-child{
+    color: #fff;
+}
 
     @media screen and (max-width:600px) {
   .team-members {
@@ -260,7 +243,7 @@ Alumini Section Started
 
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="fas fa-bars text-dark"></i>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mx-auto"> <!-- CHANGED from py-0 to mx-auto -->
