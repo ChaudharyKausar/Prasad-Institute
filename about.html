@@ -79,102 +79,6 @@ About Founder Start
     color: #1C77AD;
     border: 1.60px solid #1C77AD;
   }
-  /* ------------------------------------------------
-Our Team End
------------------------------------------------- */
-.team-members{
-  margin: 2rem auto 3.4rem;
-}
-.team-members .box {
-	border-radius: 150px;
-	background:#fff;
-	position:relative;
-	overflow: hidden;
-	text-align:center;
-}
-.team-members .box:before {
-    position: absolute;
-    content: '';
-    left: 0px;
-    top: 0px;
-    width: 0px;
-    height: 100%;
-    border-radius: 150px;
-    box-shadow: inset 0 0 25px rgba(0,0,0,0.30);
-    transition: all 0.3s ease;
-    /* background-image: linear-gradient(to right, #3c70a4 0%, #64b2cd 100%); */
-    background-color: #1C77AD ;
-}
-.team-members .box:hover:before {
-    width: 100%;
-}
-.team-members .box:hover .image-wrapper {
-	padding:0;
-}
-.team-members .box:hover .team-members .box-desc {
-	color:#fff;
-}
-.team-members .box:hover h5, .team-members .box:hover p{
-  color: #fff;
-}
-.team-members .box:hover .social li a {
-	background:#fff;
-	background-image: none;
-	color:#000;
-}
-.team-members .box:hover .social li a:hover {
-	background:#1d1d1d;
-	color:#fff;
-}
-.image-wrapper {
-    position: relative;
-	width: 210px;
-    height: 210px;
-	margin:0 auto;
-    overflow: hidden;
-    border-radius: 50%;
-    padding: 15px;
-    transition: all 0.5s ease;
-    box-shadow: inset 0px 0px 20px #1c78ad34;
-}
-.image-wrapper img {
-    border-radius: 50%;
-    transition: all 500ms ease;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.team-members .box-desc {
-	position:relative;
-}
-ul.social {
-	padding:0;
-}
-ul.social li {
-	display:inline-block;
-	list-style-type:none;
-}
-ul.social li a {
-	position:relative;
-	width: 36px;
-    height: 36px;
-	/* background-image: linear-gradient(to right, #3c70a4 0%, #64b2cd 100%); */
-  background-color: #1C77AD;
-	display:inline-block;
-	line-height:36px;
-	border-radius:50%;
-	color:#fff;
-	transition: all .5s ease;
-}
-@media screen and (max-width:600px) {
-  .team-members {
-    padding: 0 50px;
-  }
-  .image-wrapper{
-    width: 180px;
-    height: 180px;
-  }
-}
   </style>
 </head>
 
@@ -281,7 +185,7 @@ ul.social li a {
       <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
         <h3 class="display-4 text-white text-uppercase">About</h3>
         <div class="d-inline-flex text-white">
-          <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+          <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
           <i class="fa fa-angle-double-right pt-1 px-3"></i>
           <p class="m-0 text-uppercase">About</p>
         </div>
@@ -570,7 +474,7 @@ ul.social li a {
 
       <div class="row g-4">
         <!-- Testimonial Card -->
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -586,7 +490,7 @@ ul.social li a {
         </div>
 
         <!-- Copy the above col-md-4 and change content for other clients -->
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -601,7 +505,7 @@ ul.social li a {
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -617,9 +521,9 @@ ul.social li a {
         </div>
 
       </div>
-      <div class="row g-4 mt-4">
+      <div class="row g-4">
         <!-- Row 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -634,7 +538,7 @@ ul.social li a {
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -649,7 +553,7 @@ ul.social li a {
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 mt-4">
           <div class="bg-white p-4 rounded shadow-sm h-100">
             <p>❝ The progress tracker is fantastic. It’s motivating to see how much I’ve improved over time. The app has
               a great mix of common and words.</p>
@@ -670,66 +574,58 @@ ul.social li a {
 
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-    <div class="row pt-5">
+  <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
+        <div class="row pt-5">
 
-      <!-- Column 1: Logo + Description -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <a href="#"><img src="img/logo/pi_logo_2.jpeg" alt="Logo" width="150px" class="mb-3"></a>
-        <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed
-          ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam.</p>
-      </div>
+            <!-- Column 1: Logo + Description -->
+            <div class="col-lg-5 col-md-6 mb-5">
+                <a href="#"><img src="img/logo/pi_logo_2.jpeg" alt="Logo" width="130px" class="mb-3"></a>
+                <p>Prasad Institute is committed to shaping the future of aspiring medical and engineering students by
+                    providing quality education, expert mentorship, and a results-driven approach.
+                    With a strong track record of success and student satisfaction, we aim to build confident
+                    individuals ready to take on competitive exams like NEET and JEE..</p>
+            </div>
 
-      <!-- Column 3: Quick Links (NEW) -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
-        <div class="d-flex flex-column justify-content-start">
-          <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-          <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-          <a class="text-white mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
-          <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-          <!-- <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a> -->
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Get In Touch -->
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Shop No. 12, Agrawal Orchid CHS, Opp. D-Mart, Sector-15,
+                    Koparkhairane, Navi Mumbai-400709</p>
+                <p><a href="tel:90046 30009" style="color: #fff;"><i class="fa fa-phone-alt mr-2"></i>+91 90046
+                        30009</a></p>
+                <p class="footer-email"><a href="mailto:prasad.education.institute@gmail.com" style="color: #fff;"><i
+                            class="fa fa-envelope mr-2"></i>prasad.education.institute@gmail.com</a></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <!-- Column 2: Our Courses -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
-        <div class="d-flex flex-column justify-content-start">
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
-          <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a>
-        </div>
-      </div>
-
-      <!-- Column 1: Get In Touch -->
-      <div class="col-lg-3 col-md-6 mb-5">
-        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
-        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-        <div class="d-flex justify-content-start mt-4">
-          <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
-    style="border-color: rgba(256, 256, 256, .1) !important;">
-    <div class="row d-flex justify-content-center">
-      <div class="text-center mb-md-0">
-        © <span class="text-primary">Prasad Institute</span>. All Rights Reserved.
-        Website developed by <a href="#" class="text-primary">BrandMasterss</a>
-      </div>
+  <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
+        style="border-color: rgba(256, 256, 256, .1) !important; background-color: #1b130c;">
+        <div class="row d-flex justify-content-center">
+            <div class="text-center mb-md-0">
+                © <span class="text-primary">Prasad Institute</span>. All Rights Reserved.
+                Website developed by <a href="#" class="text-primary">BrandMasterss</a>
+            </div>
 
-      <!-- <div class="col-lg-6 text-center text-md-right">
+            <!-- <div class="col-lg-6 text-center text-md-right">
                 <ul class="nav d-inline-flex">
                     <li class="nav-item">
                         <a class="nav-link text-white py-0" href="#">Privacy</a>
@@ -745,8 +641,8 @@ ul.social li a {
                     </li>
                 </ul>
             </div> -->
+        </div>
     </div>
-  </div>
   <!-- Footer End -->
 
 
