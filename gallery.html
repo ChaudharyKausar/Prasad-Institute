@@ -25,166 +25,174 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .row>.column {
-            padding: 10px 8px;
-        }
-
-        .column {
-            float: left;
-            /* Remove float */
-            width: 25%;
-            /* Let image define its width */
-        }
-
-        .column img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .thumbnail-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .thumbnail-row .column {
-            float: none;
-            /* Remove float */
-            /* width: 25%; */
-            /* Let image define its width */
-        }
-        .thumbnail-row .column img{
-            /* width: 100%; */
-            height: 80px;
-            object-fit: cover;
-        }
-
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-        }
-
-        /* Modal Content */
-        .modal-content {
+        section {
             position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            max-width: 620px;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0 20px;
+            padding: 0 20px;
         }
 
-        /* The Close Button */
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .mySlides {
+        section .lightBox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.76);
+            z-index: 100;
             display: none;
-        }
-        
-        .cursor {
-            cursor: pointer;
+            z-index: 1000;
         }
 
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
+        .lightBox .lightBox_content {
+            position: fixed;
+            left: 50%;
             top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
+            transform: translate(-50%, -50%);
+            max-width: 550px;
+            width: 100%;
+            background: #F5FCFF;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
         }
 
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: #1086C7;
-            color: #fff;
-        }
-
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
+        .lightBox_content .close {
             position: absolute;
             top: 0;
+            left: -40px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0.8;
         }
 
-        .modal .modal-content img {
-            margin-bottom: -4px;
-            width: 100%;
-        }
-
-        .caption-container {
-            text-align: center;
-            background-color: black;
-            padding: 2px 16px;
-            color: white;
-        }
-
-        .demo {
-            opacity: 0.6;
-        }
-
-        .active,
-        .demo:hover {
+        .lightBox_content .close:hover {
             opacity: 1;
         }
 
-        img.hover-shadow {
-            transition: 0.3s;
+
+        section .lightBox .showImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
         }
 
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .lightBox .showImg .image {
+            height: 400px;
+            width: 900px;
+        }
+
+        .showImg .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        section .image-gallery {
+            max-width: 1300px;
+            min-height: 100vh;
+            width: 100%;
+            background: #F5FCFF;
+            margin: auto;
+        }
+
+        .image-gallery .image-container {
+            columns: 3;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .image-container img {
+            width: 100%;
+            /* height: 260px; */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .image-container .image-box {
+            position: relative;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .image-box .logo_icons {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .image-box:hover .logo_icons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-box .logo_icons .icons i {
+            color: #9D50BB;
+            background: #fff;
+        }
+
+        .logo_icons .icons i:hover {
+            color: #000;
+        }
+
+        section .image-gallery .logo_icons .text_content {
+            color: #fff;
+            font-size: 14px
+        }
+
+        section .image-gallery .text_content .followers {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: -4px;
+        }
+
+        .credit {
+            text-align: center;
+            color: #000;
+            font-weight: 900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .credit a {
+            text-decoration: none;
+            color: #9D50BB;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1034px) {
+            .lightBox_content .close {
+                top: -40px;
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 1002px) {
+            .image-gallery .image-container {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 602px) {
+            .image-gallery .image-container {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 602px) {
+            .image-gallery header {
+                font-size: 25px;
+            }
         }
     </style>
 </head>
@@ -260,166 +268,75 @@
         </div>
     </div>
 
-    <!-- Images used to open the lightbox -->
-    <div class="row">
-        <div class="column">
-            <img src="img/event.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (1).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (2).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (3).jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (4).jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (5).jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (6).jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (7).jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (8).jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (9).jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (10).jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="img/event (11).jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
-        </div>
 
-    </div>
-
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-                <div class="numbertext">1 / 12</div>
-                <img src="img/event.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 12</div>
-                <img src="img/event (1).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 12</div>
-                <img src="img/event (2).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 12</div>
-                <img src="img/event (3).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">5 / 12</div>
-                <img src="img/event (4).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">6 / 12</div>
-                <img src="img/event (5).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">7 / 12</div>
-                <img src="img/event (6).jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">8 / 12</div>
-                <img src="img/event (7).jpg" style="width:100%">
-            </div>
-
-             <div class="mySlides">
-                <div class="numbertext">9 / 12</div>
-                <img src="img/event (8).jpg" style="width:100%">
-            </div>
-
-             <div class="mySlides">
-                <div class="numbertext">10 / 12</div>
-                <img src="img/event (9).jpg" style="width:100%">
-            </div>
-
-             <div class="mySlides">
-                <div class="numbertext">11 / 12</div>
-                <img src="img/event (10).jpg" style="width:100%">
-            </div>
-
-             <div class="mySlides">
-                <div class="numbertext">12 / 12</div>
-                <img src="img/event (11).jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Caption text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <!-- Thumbnail image controls -->
-            <!-- Thumbnail image controls in a row -->
-            <div class="thumbnail-row">
-                <div class="column">
-                    <img class="demo" src="img/event.jpg" onclick="currentSlide(1)" alt="Nature">
+    <section>
+        <div class="lightBox">
+            <div class="lightBox_content">
+                <i class="fas fa-times close"></i>
+                <!-- <div class="logo_icons">
+                    <a href="#">
+                        <img class="logoImg"
+                            src="https://cdn.pixabay.com/photo/2021/09/09/21/04/fairy-lights-6611595__340.jpg" alt="">
+                        <div class="text_content">
+                            <span class="name">Learning Robo</span>
+                        </div>
+                    </a>
+                    <div class="icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div> -->
+                <div class="showImg">
+                    <div class="image">
+                        <img src="https://cdn.pixabay.com/photo/2021/09/09/21/04/fairy-lights-6611595__340.jpg" alt="">
+                    </div>
                 </div>
-                <div class="column">
-                    <img class="demo" src="img/event (1).jpg" onclick="currentSlide(2)" alt="Snow">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (2).jpg" onclick="currentSlide(3)" alt="Mountains">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (3).jpg" onclick="currentSlide(4)" alt="Lights">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (4).jpg" onclick="currentSlide(5)" alt="Nature">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (5).jpg" onclick="currentSlide(6)" alt="Snow">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (6).jpg" onclick="currentSlide(7)" alt="Mountains">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (7).jpg" onclick="currentSlide(8)" alt="Lights">
-                </div>
-                 <div class="column">
-                    <img class="demo" src="img/event (8).jpg" onclick="currentSlide(9)" alt="Nature">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (9).jpg" onclick="currentSlide(6)" alt="Snow">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (10).jpg" onclick="currentSlide(11)" alt="Mountains">
-                </div>
-                <div class="column">
-                    <img class="demo" src="img/event (11).jpg" onclick="currentSlide(12)" alt="Lights">
-                </div>
+                <!-- <div class="credit">Made with <span style="color:tomato">❤</span> by <a
+                        href="https://www.learningrobo.com/">Learning Robo</a></div> -->
             </div>
-
         </div>
-    </div>
+        <div class="image-gallery">
+            <div class="image-container">
+                <div class="image-box">
+                    <img class="gImg" src="img/event (1).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (2).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (3).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (4).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (5).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (6).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (7).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (8).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (9).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <img class="gImg" src="img/event (10).jpg" alt="">
+                </div>
+                <div class="image-box">
+                    <!-- <img class="gImg" src="img/event (11).jpg" alt=""> -->
+                </div>
 
-<!-- Footer Start -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Start -->
     <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
         <div class="row pt-5">
 
@@ -463,7 +380,7 @@
         </div>
     </div>
 
-   <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
+    <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
         style="border-color: rgba(256, 256, 256, .1) !important; background-color: #1b130c;">
         <div class="row d-flex justify-content-center">
             <div class="text-center mb-md-0">
@@ -538,6 +455,27 @@
             dots[slideIndex - 1].className += " active";
             captionText.innerHTML = dots[slideIndex - 1].alt;
         }
+    </script>
+
+    <script>
+        let body = document.querySelector("body"),
+            lightBox = document.querySelector(".lightBox"),
+            img = document.querySelectorAll(".gImg"),
+            showImg = lightBox.querySelector(".showImg img"),
+            close = lightBox.querySelector(".close");
+
+        for (let image of img) {
+            image.addEventListener("click", () => {
+                showImg.src = image.src;
+                lightBox.style.display = "block";
+                body.style.overflow = "hidden";
+                close.onclick = () => {
+                    lightBox.style.display = "none";
+                    body.style.overflow = "visible";
+                };
+            });
+        }
+
     </script>
 </body>
 
