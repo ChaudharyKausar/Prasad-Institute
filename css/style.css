@@ -11248,8 +11248,8 @@ Our Team Start
 }
 .image-wrapper {
     position: relative;
-	width: 210px;
-    height: 210px;
+	width: 180px;
+    height: 180px;
 	margin:0 auto;
     overflow: hidden;
     border-radius: 50%;
@@ -11288,7 +11288,7 @@ ul.social li a {
 }
 @media screen and (max-width:600px) {
   .team-members {
-    padding: 0 50px;
+    padding: 0 40px;
   }
   .image-wrapper{
     width: 180px;
@@ -11310,16 +11310,18 @@ ul.social li a {
 Video Testimonial Start
 ------------------------------------------------ */
 .video-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* flex-wrap: wrap; */
+  /* gap: 20px;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center; */
   gap: 20px;
 }
 
 .video-card {
-  width: 300px;
+  /* width: 500px; */
+  /* height: 300px; */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -11330,15 +11332,15 @@ Video Testimonial Start
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
 }
 
-.video-frame iframe {
+.video-frame iframe, .video-frame video{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .video-card h5 {
@@ -11348,4 +11350,17 @@ Video Testimonial Start
   text-align: center;
 }
 
+@media (max-width: 992px) {
+ .video-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+ .video-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
