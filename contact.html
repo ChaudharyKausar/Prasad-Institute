@@ -229,19 +229,19 @@
         <form name="sentMessage" id="contactForm" novalidate="novalidate">
           <div class="row g-3">
             <div class="col-6">
-              <input type="text" class="form-control p-4 mb-4" placeholder="Your Name">
+              <input type="text" class="form-control p-4 mb-4" id="name" name="name" placeholder="Your Name">
             </div>
             <div class="col-6">
-              <input type="email" class="form-control p-4 mb-4" placeholder="Your Email">
+              <input type="email" class="form-control p-4 mb-4"  id="email" name="email" placeholder="Your Email">
             </div>
             <div class="col-12">
-              <input type="text" class="form-control p-4 mb-4" placeholder="Subject">
+              <input type="text" class="form-control p-4 mb-4" id="subject" name="subject" placeholder="Subject">
             </div>
             <div class="col-12">
-              <textarea class="form-control p-4 mb-4" rows="4" placeholder="Message"></textarea>
+              <textarea class="form-control p-4 mb-4" rows="4" id="message" name="message" placeholder="Message"></textarea>
             </div>
             <div class="col-12">
-             <button class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2 btn-block" type="submit">Submit</button>
+             <button class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2 btn-block" id="sendMessageButton" type="submit">Submit</button>
             </div>
           </div>
         </form>
