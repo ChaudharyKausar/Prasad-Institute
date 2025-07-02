@@ -11085,7 +11085,9 @@ h6,
 
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
-  background-size: cover;
+  /* background-image: url('img/page-header.jpg'); */
+  /* background-size: cover; */
+  object-fit: contain;
 }
 
 .cat-item img {
@@ -11316,7 +11318,8 @@ Video Testimonial Start
   /* gap: 20px;
   justify-content: center;
   align-items: center; */
-  gap: 20px 4rem !important;
+  gap: 20px !important;
+  padding: 20px 4rem;
 }
 
 .video-card {
@@ -11353,7 +11356,7 @@ Video Testimonial Start
 @media (max-width: 992px) {
  .video-gallery {
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
+    padding: 38px;
   }
 }
 
