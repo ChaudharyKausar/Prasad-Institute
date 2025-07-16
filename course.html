@@ -18,61 +18,145 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .course-section {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+            padding: 4rem;
+        }
+
+        .tab-wrapper {
+            box-shadow: 0 0 4px #0000001c;
+            padding: 20px;
+            border-radius: 8px;
+
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px;
+            background: #1f1f1f;
+            color: #eee;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .tab.active {
+            background: #007BFF;
+            color: #fff;
+        }
+
+        .tab-content {
+            background: #fff;
+            /* box-shadow: 0 0 4px 10px #00000069; */
+            padding: 20px;
+            border-radius: 6px;
+            max-width: 1080px;
+        }
+
+        /* --------------------------------
+        course card
+        --------------------------------- */
+         .course-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+      overflow: hidden;
+      text-align: left;
+      height: min-content;
+    }
+    .course-card img {
+      width: 100%;
+      display: block;
+    }
+    .course-content {
+      padding: 16px;
+    }
+    .price {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+      margin: 8px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 0.95em;
+      margin-left: 8px;
+    }
+    .discount {
+      color: #e74c3c;
+      font-weight: bold;
+      float: right;
+      font-size: 0.95em;
+      margin-top: 4px;
+    }
+    .buy-btn {
+      display: block;
+      background-color: #6c5ce7;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 16px 0;
+      font-weight: bold;
+    }
+    .course-includes {
+      border-top: 1px solid #ddd;
+      padding: 16px;
+      font-size: 0.95em;
+      color: #333;
+    }
+    .course-includes ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .course-includes li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .course-includes li i {
+      color: #6c5ce7;
+      margin-right: 8px;
+    }
+    </style>
 </head>
 
 <body>
-   <!-- Topbar Start -->
-    <!-- <div class="container-fluid d-none d-lg-block">
-        <div class="row align-items-center py-4 px-xl-5">
-            <div class="col-lg-3">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-                </a>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                        <small>123 Street, New York, USA</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                        <small>info@example.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
-                        <small>+012 345 6789</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
-
-
     <!-- Navbar Start -->
-   <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid" style="position: sticky; z-index: 1000; background-color: #fff; top:0;">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
@@ -140,11 +224,11 @@
     <div class="container-fluid page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
-                <h3 class="display-4 text-white text-uppercase">Contact</h3>
+                <h3 class="display-4 text-white text-uppercase">Courses</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
+                    <p class="m-0 text-uppercase">Courses</p>
                 </div>
             </div>
         </div>
@@ -152,116 +236,85 @@
     <!-- Header End -->
 
 
-    <!-- Contact Start -->
-    <!-- <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Contact</h5>
-                <h1>Contact For Any Query</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form bg-secondary rounded p-5">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <!-- Course Section -->
 
-    <section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
-      <h2 class="fw-bold">Contact For Any Query</h2>
+    <div class="course-section">
+        <div class="tab-wrapper">
+            <div class="tabs">
+                <button class="tab active" data-tab="home">JEE Foundation</button>
+                <button class="tab" data-tab="profile">NEET Foundation</button>
+                <button class="tab" data-tab="settings">JEE (Main + Advance)</button>
+                <button class="tab" data-tab="settings">NEET Regular</button>
+                <button class="tab" data-tab="settings">Science</button>
+            </div>
+
+            <div class="tab-content" id="home">Welcome to Home Tab Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Reiciendis possimus enim ullam eos hic in, natus expedita sed nihil vitae odio. Laborum nesciunt
+                consequatur officiis exercitationem quis sequi tenetur facilis accusantium inventore, temporibus
+                reprehenderit dolor id, cumque voluptates. Vitae cupiditate aperiam laboriosam in, voluptates ex soluta
+                dolorem qui nemo exercitationem nisi eum ratione sequi? Quis, dolore fugiat! Possimus eos atque sint
+                praesentium nobis molestiae vel vero? Vel, optio illum, ipsa quas, ex adipisci minima blanditiis
+                mollitia commodi tempore magni sunt suscipit ad exercitationem quia maxime unde! Voluptates officia
+                animi molestiae quaerat, eveniet maxime! Qui doloremque delectus dolor, voluptatem iure cumque error,
+                amet corrupti, debitis perferendis quo at dignissimos minima rerum quae veniam sapiente? Modi sint
+                quisquam dolore velit dolorem impedit suscipit a laboriosam aut molestias, eius laudantium ratione
+                facilis, natus ullam doloribus odio atque pariatur ad nostrum officia dolor veritatis. Ducimus quas eum
+                similique ullam recusandae quis ab dolore fugiat harum maxime vero repellendus voluptatum nisi, maiores
+                dicta deserunt doloremque cum est ex aut labore autem, modi inventore. Laudantium delectus autem itaque
+                ipsum excepturi soluta maiores aliquid cum fuga corporis, facere id quia voluptas nemo quos ipsa at
+                iste. Dolor libero ab nam quis fuga ratione voluptas obcaecati commodi sunt iure ullam, ipsum adipisci
+                fugit natus dolore dignissimos cum aperiam. Molestiae, praesentium voluptatem. Quas, soluta consequatur.
+                Error perspiciatis quos labore eius earum ipsa quas, suscipit consectetur quaerat ratione ea molestiae
+                similique molestias perferendis sequi veniam enim numquam minus porro, debitis accusantium sit est culpa
+                nobis. Pariatur dolor sequi id delectus quas suscipit neque laudantium qui commodi vel quis dolores
+                ipsam ea unde nesciunt recusandae adipisci, asperiores, soluta nemo incidunt a, saepe consectetur vero
+                eligendi. Architecto laudantium porro accusamus laboriosam eum possimus earum officia voluptatibus nobis
+                perferendis, eos natus eius alias quos illo pariatur delectus! Blanditiis vel autem harum at iste aut
+                necessitatibus officia placeat. Illum hic eos minima minus, velit ab quisquam, nulla vero, eum
+                recusandae architecto alias numquam libero quaerat aspernatur distinctio totam possimus ullam harum
+                tempora. Aspernatur, labore. Officiis numquam voluptatibus placeat iste repudiandae eaque ut atque
+                delectus unde, reprehenderit, nam hic, aperiam neque nihil non aspernatur necessitatibus nostrum vitae
+                officia cupiditate nesciunt suscipit! Qui ratione cumque dolorem pariatur hic. In, distinctio! Numquam
+                sint nesciunt, obcaecati mollitia rerum, recusandae tempore voluptatem deleniti quos amet iste tenetur
+                consequuntur voluptate repudiandae aspernatur. Molestiae doloremque vel porro magni consectetur?
+                Cupiditate ipsa, accusantium sit similique enim ullam sequi aut sapiente quae vero officia fugit omnis,
+                quam fuga pariatur velit consequuntur esse officiis quod corporis eos cum est. Ratione possimus alias
+                aut incidunt tempora, harum repudiandae ipsa suscipit velit sunt aliquid earum optio consequatur dolore
+                saepe expedita? Quisquam ipsum sapiente molestiae. Exercitationem odit explicabo molestiae dolorum ipsum
+                qui iure totam beatae culpa suscipit expedita molestias laborum deleniti, illo amet a possimus, ex sit?
+                Delectus doloribus, eius molestias reiciendis quia voluptatum minima illo ullam dolor explicabo, sunt
+                deserunt. Sint eaque vel adipisci tempore, dolorum maiores quam odit sunt quas rerum dolore optio quae
+                quos, aspernatur temporibus. Nisi optio, dolorum consectetur distinctio nostrum provident veritatis?
+            </div>
+            <div class="tab-content" id="profile" style="display: none;">This is your Profile</div>
+            <div class="tab-content" id="settings" style="display: none;">Adjust your Settings here</div>
+        </div>
+ <div class="course-card">
+    <img src="img/11th PCB.jpg" alt="Course Image" />
+    <div class="course-content">
+      <div class="price">
+        $549.00
+        <span class="old-price">$3,499.00</span>
+        <!-- <span class="discount">85% off</span> -->
+      </div>
+      <a href="#" class="buy-btn">Buy Now</a>
     </div>
-
-    <div class="row g-4">
-      <!-- Contact Info -->
-      <div class="col-lg-4">
-        <h5 class="mb-4">Get In Touch</h5>
-        <p>Visit Prasad Institute, Koparkhairane or contact us for admissions, course details, and expert guidance.</p>
-
-        <div class="mb-3 d-flex align-items-start">
-          <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Office</h6>
-            <p class="mb-0">Shop No. 12, Agrawal Orchid CHS, Opp. D-Mart, Sector-15, Koparkhairane, Navi Mumbai-400709</p>
-          </div>
-        </div>
-
-        <div class="mb-3 d-flex align-items-start">
-          <i class="bi bi-telephone-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Mobile</h6>
-            <p class="mb-0"><a href="tel:+91 90046 30009" style="color: #6c6a74;"> +91 90046 30009</a></p>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-start">
-          <i class="bi bi-envelope-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Email</h6>
-            <p class="mb-0 footer-email"> <a href="mailto:prasad.education.institute@gmail.com"style="color: #6c6a74;"></a>prasad.education.institute@gmail.com</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Google Map -->
-      <div class="col-lg-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15080.746413953899!2d72.98613425541994!3d19.099468000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d4fa127db9%3A0x2881a37099b62595!2sPrasad%20Institute!5e0!3m2!1sen!2sin!4v1750404490977!5m2!1sen!2sin" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="col-lg-4">
-        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-          <div class="row g-3">
-            <div class="col-6">
-              <input type="text" class="form-control p-4 mb-4" id="name" name="name" placeholder="Your Name">
-            </div>
-            <div class="col-6">
-              <input type="email" class="form-control p-4 mb-4"  id="email" name="email" placeholder="Your Email">
-            </div>
-            <div class="col-12">
-              <input type="text" class="form-control p-4 mb-4" id="subject" name="subject" placeholder="Subject">
-            </div>
-            <div class="col-12">
-              <textarea class="form-control p-4 mb-4" rows="4" id="message" name="message" placeholder="Message"></textarea>
-            </div>
-            <div class="col-12">
-             <button class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="sendMessageButton" type="submit">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
+    <div class="course-includes">
+      <strong>This course includes:</strong>
+      <ul>
+        <li><i class="fas fa-video"></i>65 hours on-demand video</li>
+        <li><i class="fas fa-download"></i>49 downloadable resources</li>
+        <li><i class="fas fa-mobile-alt"></i>Access on mobile and TV</li>
+        <li><i class="fas fa-file-alt"></i>86 articles</li>
+        <li><i class="fas fa-code"></i>6 coding exercises</li>
+        <li><i class="fas fa-certificate"></i>Certificate of completion</li>
+      </ul>
     </div>
   </div>
-</section>
-    <!-- Contact End -->
+    </div>
+   
 
-
-   <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
         <div class="row pt-5">
 
@@ -298,19 +351,21 @@
                     <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-square" href="https://www.instagram.com/prasadinstitute?igsh=MXcybGkwZ2lwN2tlcQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-square"
+                        href="https://www.instagram.com/prasadinstitute?igsh=MXcybGkwZ2lwN2tlcQ==" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
         </div>
     </div>
-
     <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
         style="border-color: rgba(256, 256, 256, .1) !important; background-color: #1b130c;">
         <div class="row d-flex justify-content-center">
             <div class="text-center mb-md-0">
                 © <span class="text-primary">Prasad Institute</span>. All Rights Reserved.
-                Website developed by <a href="https://brandmasterss.com/" target="_blank" class="text-primary">BrandMasterss</a>
+                Website developed by <a href="https://brandmasterss.com/" target="_blank"
+                    class="text-primary">BrandMasterss</a>
             </div>
 
             <!-- <div class="col-lg-6 text-center text-md-right">
@@ -350,6 +405,23 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) => t.classList.remove("active"));
+                tab.classList.add("active");
+
+                const selected = tab.getAttribute("data-tab");
+                contents.forEach((c) => {
+                    c.style.display = c.id === selected ? "block" : "none";
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>

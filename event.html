@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+     <meta charset="utf-8">
     <title>Prasad Institute</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
@@ -18,61 +17,154 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .event-list {
+      /* max-width: 800px; */
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding: 4rem 6rem;
+    }
+
+    .event {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.068);
+      flex-wrap: wrap;
+    }
+
+    .event-date {
+      background: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      width: 80px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .event-date span {
+      display: block;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .event-date strong {
+      font-size: 24px;
+      color: #414141;
+      margin-top: 5px;
+    }
+
+    .event-content {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .event-image {
+      flex: 1 1 200px;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 20px 14px;
+      overflow: hidden;
+    }
+
+    .event-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .event-details {
+      flex: 2 1 300px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .event-details h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      color: #141414;
+    }
+
+    .event-details p {
+      margin: 0 0 10px;
+      font-size: 15px;
+      color: #414141;
+    }
+     strong{
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #007BFF;
+        margin: 12px 0 10px;
+        /* display: block; */
+        width: max-content;
+        padding: 4px 10px;
+        border-radius: 30px;
+     }
+    .event-details ul {
+        color: #414141;
+        margin: 0 0 10px;
+        font-size: 15px;
+    }
+    .event-details a {
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+      margin-top: 5px;
+      display: inline-block;
+    }
+
+    .event-details a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 600px) {
+        .event-list {
+            padding: 2rem;
+        }
+      .event {
+        flex-direction: column;
+      }
+      .event-date {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+    </style>
 </head>
-
 <body>
-   <!-- Topbar Start -->
-    <!-- <div class="container-fluid d-none d-lg-block">
-        <div class="row align-items-center py-4 px-xl-5">
-            <div class="col-lg-3">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-                </a>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
-                        <small>123 Street, New York, USA</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
-                        <small>info@example.com</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
-                    <div class="text-left">
-                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
-                        <small>+012 345 6789</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
-
-
     <!-- Navbar Start -->
-   <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid" style="position: sticky; z-index: 1000; background-color: #fff; top:0;">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
@@ -140,129 +232,178 @@
     <div class="container-fluid page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
-                <h3 class="display-4 text-white text-uppercase">Contact</h3>
+                <h3 class="display-4 text-white text-uppercase">Events</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Contact</p>
+                    <p class="m-0 text-uppercase">Events</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
-
-    <!-- Contact Start -->
-    <!-- <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Contact</h5>
-                <h1>Contact For Any Query</h1>
+ 
+    <!-- Event List -->
+     <div class="event-list">
+<div class="text-center">
+                <h5 class="text-primary text-uppercase mb-1" style="letter-spacing: .20px;">Inspiring Learning, Building Connections, and Celebrating Achievements</h5>
+                <h2>Events & Activities</h2>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form bg-secondary rounded p-5">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
-      <h2 class="fw-bold">Contact For Any Query</h2>
+  <!-- Event 1 -->
+  <div class="event">
+    <div class="event-date">
+      <span>JUN</span>
+      <!-- <strong>23</strong> -->
     </div>
-
-    <div class="row g-4">
-      <!-- Contact Info -->
-      <div class="col-lg-4">
-        <h5 class="mb-4">Get In Touch</h5>
-        <p>Visit Prasad Institute, Koparkhairane or contact us for admissions, course details, and expert guidance.</p>
-
-        <div class="mb-3 d-flex align-items-start">
-          <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Office</h6>
-            <p class="mb-0">Shop No. 12, Agrawal Orchid CHS, Opp. D-Mart, Sector-15, Koparkhairane, Navi Mumbai-400709</p>
-          </div>
-        </div>
-
-        <div class="mb-3 d-flex align-items-start">
-          <i class="bi bi-telephone-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Mobile</h6>
-            <p class="mb-0"><a href="tel:+91 90046 30009" style="color: #6c6a74;"> +91 90046 30009</a></p>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-start">
-          <i class="bi bi-envelope-fill text-primary fs-4 me-3"></i>
-          <div>
-            <h6 class="mb-1">Email</h6>
-            <p class="mb-0 footer-email"> <a href="mailto:prasad.education.institute@gmail.com"style="color: #6c6a74;"></a>prasad.education.institute@gmail.com</p>
-          </div>
-        </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img src="img/JEE Crash.jpg" alt="Event 1">
       </div>
+      <div class="event-details">
+        <h3>Career Guidance Seminar</h3>
+        <p>At Prasad Institute, we regularly organize a variety of educational and career-focused events to empower our students. These events are thoughtfully designed to inspire learning, build confidence, and provide practical guidance for a successful future.
+</p>
+        <strong>Our Events Include:</strong>
+            <ul>
+                <li>Career Guidance Seminars – Helping students explore the right career options with expert advice.</li>
+                <li>Skill Development Workshops – Enhancing essential skills and preparing for real-world challenges.</li>
+                <li>Motivational Talks & Expert Sessions – Learning from achievers and industry professionals.</li>
+            </ul>
 
-      <!-- Google Map -->
-      <div class="col-lg-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15080.746413953899!2d72.98613425541994!3d19.099468000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d4fa127db9%3A0x2881a37099b62595!2sPrasad%20Institute!5e0!3m2!1sen!2sin!4v1750404490977!5m2!1sen!2sin" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="col-lg-4">
-        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-          <div class="row g-3">
-            <div class="col-6">
-              <input type="text" class="form-control p-4 mb-4" id="name" name="name" placeholder="Your Name">
-            </div>
-            <div class="col-6">
-              <input type="email" class="form-control p-4 mb-4"  id="email" name="email" placeholder="Your Email">
-            </div>
-            <div class="col-12">
-              <input type="text" class="form-control p-4 mb-4" id="subject" name="subject" placeholder="Subject">
-            </div>
-            <div class="col-12">
-              <textarea class="form-control p-4 mb-4" rows="4" id="message" name="message" placeholder="Message"></textarea>
-            </div>
-            <div class="col-12">
-             <button class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" id="sendMessageButton" type="submit">Submit</button>
-            </div>
-          </div>
-        </form>
+       <p>These programs offer valuable insights and opportunities to interact with experienced mentors and counselors. We believe that such events play a crucial role in shaping well-rounded individuals and preparing them for success.</p>
+        
+        <!-- <a href="#">View Event Details →</a> -->
       </div>
     </div>
   </div>
-</section>
-    <!-- Contact End -->
+
+  <!-- Event 2 -->
+  <div class="event">
+    <div class="event-date">
+      <span>JUL</span>
+      <strong>04</strong>
+    </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img src="img/11th PCM.jpg" alt="Event 2">
+      </div>
+      <div class="event-details">
+        <h3>Combined Parent Meeting
+</h3>
+        <p>At Prasad Institute, we believe in building strong partnerships with parents to support every child’s growth. Our Combined Parent Meetings are organized to keep parents informed about academic progress, overall development, and future goals. These sessions create an open platform for meaningful discussions between teachers, parents, and students.</p>
+        <strong>What Happens in the Meeting:</strong>
+        <ul>
+            <li>Detailed review of student performance and attendance</li>
+            <li>Feedback and suggestions from teachers</li>
+            <li>Guidance on how parents can support learning at home</li>
+            <li>Discussion on upcoming academic plans and activities</li>
+        </ul>
+
+        <strong>Why Attend:
+</strong>
+<ul>
+    <li>Understand your child’s strengths and areas of improvement</li>
+    <li> Clarify doubts and set clear goals together</li>
+    <li>Strengthen collaboration between parents and faculty</li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event 3 -->
+  <div class="event">
+    <div class="event-date">
+      <span>JUL</span>
+      <strong>04</strong>
+    </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img src="img/11th PCM.jpg" alt="Event 2">
+      </div>
+      <div class="event-details">
+        <h3>Admission Counseling
+</h3>
+        <p>At Prasad Institute, we regularly conduct Admission Counseling sessions to help students and parents make informed decisions about their education. These sessions are designed to provide complete clarity on available courses, eligibility requirements, and the step-by-step admission process.</p>
+        <p>Our expert counselors guide you at every stage, from understanding career prospects to filling out application forms accurately. With personalized advice, you can confidently plan your academic journey and choose the right path for your future success.
+
+</p>
+        <strong>Highlights of the Counseling Session:</strong>
+        <ul>
+            <li>Personalized course and career guidance</li>
+            <li>Complete information on eligibility and admission steps</li>
+            <li>Assistance with documentation and application forms</li>
+            <li>One-on-one doubt clearing with experienced counselors</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Event 4 -->
+   <div class="event">
+    <div class="event-date">
+      <span>JUL</span>
+      <strong>04</strong>
+    </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img src="img/11th PCM.jpg" alt="Event 2">
+      </div>
+      <div class="event-details">
+        <h3>Class Anniversary Celebration
+</h3>
+        <p>At Prasad Institute, we celebrate the Class Anniversary to honor the journey, achievements, and memories shared by every batch. This special occasion strengthens bonds among students, teachers, and parents while recognizing milestones reached together.</p>
+        <p>The celebration creates a positive environment where everyone comes together to reflect on progress, share experiences, and inspire the next phase of learning and growth. It’s a proud moment that builds a sense of belonging and motivation.
+
+</p>
+        <strong>Highlights:</strong>
+        <ul>
+            <li>Felicitation of outstanding performers</li>
+            <li>Sharing success stories and memories</li>
+            <li>Fun activities, cultural performances, and games</li>
+            <li>Interaction with faculty and fellow students</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Event 5 -->
+   <div class="event">
+    <div class="event-date">
+      <span>JUL</span>
+      <strong>04</strong>
+    </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img src="img/11th PCM.jpg" alt="Event 2">
+      </div>
+      <div class="event-details">
+        <h3>Motivational Movie Break
+</h3>
+        <p>At Prasad Institute, we organize Motivational Movie Breaks to inspire students with powerful stories and real-life examples of determination, courage, and success. Watching such films together helps students relax, reflect, and recharge their minds in a positive environment.</p>
+        <p>These sessions are designed to combine learning with entertainment, encouraging students to adopt valuable life lessons and stay motivated to achieve their goals. It’s a refreshing break that leaves a lasting impact.</p>
+        <strong>Highlights of the Movie Break:</strong>
+        <ul>
+            <li>Screening of inspiring movies and documentaries</li>
+            <li>Group discussions to share thoughts and learnings</li>
+            <li>Fun and interactive activities after the movie</li>
+            <li>Creating a positive and motivating atmosphere</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
-   <!-- Footer Start -->
-    <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
+
+
+
+     <!-- Footer Start -->
+  <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
         <div class="row pt-5">
 
             <!-- Column 1: Logo + Description -->
@@ -304,8 +445,7 @@
 
         </div>
     </div>
-
-    <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
+   <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
         style="border-color: rgba(256, 256, 256, .1) !important; background-color: #1b130c;">
         <div class="row d-flex justify-content-center">
             <div class="text-center mb-md-0">
@@ -351,5 +491,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

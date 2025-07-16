@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prasad Institute</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <link rel="icon" type="image/png" href="img/logo/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/logo/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/logo/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="img/logo/favicon/site.webmanifest" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+
+/* ----------------------------------------------------
+Video testimonail
+----------------------------------------------------- */
+.video-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 4rem 7rem;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 460px;
+      display: block;
+       object-fit: cover;
+       object-position: center;
+    }
+
+    .video-card-footer {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1086C7;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .video-card-footer button {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      padding: 6px 12px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .video-card-footer button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media screen and (max-width:450px) {
+        .video-section {
+        grid-template-columns: repeat(auto-fit, 1fr);
+        padding: 2rem;
+    }
+}
+
+        /*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+        .testimonials .testimonial-item {
+            background-color: var(--surface-color);
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            box-sizing: content-box;
+            padding: 30px;
+            margin: 30px 15px;
+            position: relative;
+            height: 100%;
+        }
+
+        .testimonials .testimonial-item .testimonial-img {
+            width: 90px;
+            border-radius: 50px;
+            margin-right: 15px;
+        }
+
+        .testimonials .testimonial-item h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+
+        .testimonials .testimonial-item h4 {
+            font-size: 14px;
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            margin: 0;
+        }
+
+        .testimonials .testimonial-item .stars {
+            margin: 10px 0;
+        }
+
+        .testimonials .testimonial-item .stars i {
+            color: #ffc107;
+            margin: 0 1px;
+        }
+
+        .testimonials .testimonial-item .quote-icon-left,
+        .testimonials .testimonial-item .quote-icon-right {
+            color: color-mix(in srgb, var(--accent-color), transparent 50%);
+            font-size: 26px;
+            line-height: 0;
+        }
+
+        .testimonials .testimonial-item .quote-icon-left {
+            display: inline-block;
+            left: -5px;
+            position: relative;
+        }
+
+        .testimonials .testimonial-item .quote-icon-right {
+            display: inline-block;
+            right: -5px;
+            position: relative;
+            top: 10px;
+            transform: scale(-1, -1);
+        }
+
+        .testimonials .testimonial-item p {
+            font-style: italic;
+            margin: 15px auto 15px auto;
+        }
+
+        .testimonials .swiper-wrapper {
+            height: auto;
+        }
+
+        .testimonials .swiper-pagination {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .testimonials .swiper-pagination .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+            opacity: 1;
+        }
+
+        .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: var(--accent-color);
+        }
+
+        @media (max-width: 767px) {
+            .testimonials .testimonial-wrap {
+                padding-left: 0;
+            }
+
+            .testimonials .testimonial-item {
+                padding: 30px;
+                margin: 15px;
+            }
+
+            .testimonials .testimonial-item .testimonial-img {
+                position: static;
+                left: auto;
+            }
+        }
+
+        /* Testimonials Owl Carousel Styling */
+        section.testimonials {
+            padding: 60px 0;
+            border-radius: 8px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        #customers-testimonials .item {
+            background-color: var(--surface-color);
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.034);
+            box-sizing: content-box;
+            padding: 30px;
+            margin: 30px 10px;
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 560px;
+            border-radius: 8px;
+        }
+        #customers-testimonials .item .shadow-effect{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #customers-testimonials .shadow-effect {
+            padding: 20px;
+        }
+
+        #customers-testimonials .img-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #ddd;
+        }
+
+        #customers-testimonials .testimonial-name {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #1086C7;
+        }
+
+        #customers-testimonials .testimonial-desgination {
+            font-size: 15px;
+        }
+
+        #customers-testimonials p {
+            color: #555;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #customers-testimonials .ra-rating-star {
+            margin: 15px 0 15px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #customers-testimonials .ra-rating-star li {
+            display: inline-block;
+            margin: 0 -2px;
+            color: #FDCF00;
+        }
+     
+        .owl-theme .owl-dots .owl-dot span{
+            width: 14px;
+            height: 14px;
+            background-color: #1086C7;
+            opacity: 0.6;
+            margin: 1;
+        }
+           .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+             background-color: #1086C7;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <!-- Navbar Start -->
+    <div class="container-fluid" style="position: sticky; z-index: 1000; background-color: #fff; top:0;">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <!-- <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none" data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Subjects</h5>
+                    <i class="fa fa-angle-down text-primary"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">HTML</a>
+                                <a href="" class="dropdown-item">CSS</a>
+                                <a href="" class="dropdown-item">jQuery</a>
+                            </div>
+                        </div>
+                        <a href="" class="nav-item nav-link">Apps Design</a>
+                        <a href="" class="nav-item nav-link">Marketing</a>
+                        <a href="" class="nav-item nav-link">Research</a>
+                        <a href="" class="nav-item nav-link">SEO</a>
+                    </div>
+                </nav> -->
+                <a href="" class="text-decoration-none">
+                    <!-- <h1 class="py-3"><span class="text-primary">E</span>COURSES</h1> -->
+                    <img src="img/logo/pi logo.png" alt="" width="50px" class="py-1">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <!-- <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1> -->
+                        <img src="img/logo/pi logo.png" alt="" width="50px" class="py-1">
+
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                         <i class="fas fa-bars text-dark"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto"> <!-- CHANGED from py-0 to mx-auto -->
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="course.html" class="nav-item nav-link">Course</a>
+                            <a href="alumini.html" class="nav-item nav-link">Alumni</a>
+                            <a href="event.html" class="nav-item nav-link">Events</a>
+                            <a href="result.html" class="nav-item nav-link"> Result</a>
+                            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        </div>
+                        <a class="btn btn-primary py-2 px-4 d-none d-lg-block mt-2" href="contact.html">Contact Now</a>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Alumni</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Alumni</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+ <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-1" style="letter-spacing: .20px;">Real Feedback – Real Transformation</h5>
+                <h2>Video Testimonials</h2>
+            </div>
+    <section class="video-section">
+  <!-- Video 1 -->
+  <div class="video-card">
+    <video controls>
+      <source src="img/Review Video 1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-card-footer">
+      <span>Students Share Their Feedback</span>
+      <!-- <button onclick="window.open('img/Review Video 1.mp4', '_blank')">Visit site</button> -->
+    </div>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="video-card">
+    <video controls>
+      <source src="img/Review Video 2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-card-footer">
+      <span>Parent Feedback</span>
+      <!-- <button onclick="window.open('https://example.com', '_blank')">Explore</button> -->
+    </div>
+  </div>
+</section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonials">
+          <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonial</h5>
+        <h1>What Say Our Students</h1>
+      </div>
+        <div class="container">
+            <div id="customers-testimonials" class="owl-carousel owl-theme">
+
+                <!-- Testimonial 1 -->
+                <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+
+                <!-- Testimonial 2 -->
+                 <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+
+                <!-- Testimonial 3 -->
+                 <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+
+                <!-- Testimonial 4 -->
+                 <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+
+                <!-- Testimonial 5 -->
+                 <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+
+                <!-- Testimonial 6 -->
+                 <div class="item">
+                    <div class="shadow-effect">
+                        <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
+                        <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
+                            academically focused environment and supportive teachers kept me motivated. I learned that
+                            consistency beats perfection, which helped me achieve 80.17% in HSC and 89.37 percentile in
+                            CET. The institute also taught me strong time management and study habits that will benefit
+                            me in the future.</p>
+                    </div>
+                    <div class="testimonial-name">SHRAVANI NARVEKAR</div>
+                    <div class="testimonial-desgination">11th & 12th Science with CET Coaching</div>
+                    <ul class="ra-rating-star">
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE838;</i></li>
+                        <li><i class="material-icons">&#xE839;</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section -->
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
+        <div class="row pt-5">
+
+            <!-- Column 1: Logo + Description -->
+            <div class="col-lg-5 col-md-6 mb-5">
+                <a href="#"><img src="img/logo/pi_logo_2.jpeg" alt="Logo" width="130px" class="mb-3"></a>
+                <p>Prasad Institute is committed to shaping the future of aspiring medical and engineering students by
+                    providing quality education, expert mentorship, and a results-driven approach.
+                    With a strong track record of success and student satisfaction, we aim to build confident
+                    individuals ready to take on competitive exams like NEET and JEE</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
+                    <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Get In Touch -->
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Shop No. 12, Agrawal Orchid CHS, Opp. D-Mart, Sector-15,
+                    Koparkhairane, Navi Mumbai-400709</p>
+                <p><a href="tel:90046 30009" style="color: #fff;"><i class="fa fa-phone-alt mr-2"></i>+91 90046
+                        30009</a></p>
+                <p class="footer-email"><a href="mailto:prasad.education.institute@gmail.com" style="color: #fff;"><i
+                            class="fa fa-envelope mr-2"></i>prasad.education.institute@gmail.com</a></p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-square"
+                        href="https://www.instagram.com/prasadinstitute?igsh=MXcybGkwZ2lwN2tlcQ==" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid text-white border-top py-4 px-sm-3 px-md-5"
+        style="border-color: rgba(256, 256, 256, .1) !important; background-color: #1b130c;">
+        <div class="row d-flex justify-content-center">
+            <div class="text-center mb-md-0">
+                © <span class="text-primary">Prasad Institute</span>. All Rights Reserved.
+                Website developed by <a href="https://brandmasterss.com/" target="_blank"
+                    class="text-primary">BrandMasterss</a>
+            </div>
+
+            <!-- <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- <script>
+        $('#testiCarousel').carousel({
+    interval: false
+});
+    </script> -->
+
+    <script>
+        jQuery(document).ready(function ($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $("#customers-testimonials").owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots: true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1170: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
