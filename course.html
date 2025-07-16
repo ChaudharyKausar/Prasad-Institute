@@ -38,6 +38,7 @@
         .course-section {
             display: flex;
             justify-content: center;
+            /* flex-wrap: wrap; */
             gap: 2rem;
             width: 100%;
             padding: 4rem;
@@ -70,7 +71,7 @@
         }
 
         .tab.active {
-            background: #007BFF;
+            background: #1086C7;
             color: #fff;
         }
 
@@ -82,80 +83,157 @@
             max-width: 1080px;
         }
 
+        .tab-content p {
+            font-size: 14px;
+        }
+
+        .tab-content ul li {
+            font-size: 14px;
+        }
+
         /* --------------------------------
         course card
         --------------------------------- */
-         .course-card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 400px;
-      overflow: hidden;
-      text-align: left;
-      height: min-content;
-    }
-    .course-card img {
-      width: 100%;
-      display: block;
-    }
-    .course-content {
-      padding: 16px;
-    }
-    .price {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #000;
-      margin: 8px 0;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: #888;
-      font-size: 0.95em;
-      margin-left: 8px;
-    }
-    .discount {
-      color: #e74c3c;
-      font-weight: bold;
-      float: right;
-      font-size: 0.95em;
-      margin-top: 4px;
-    }
-    .buy-btn {
-      display: block;
-      background-color: #6c5ce7;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 4px;
-      margin: 16px 0;
-      font-weight: bold;
-    }
-    .course-includes {
-      border-top: 1px solid #ddd;
-      padding: 16px;
-      font-size: 0.95em;
-      color: #333;
-    }
-    .course-includes ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .course-includes li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-    .course-includes li i {
-      color: #6c5ce7;
-      margin-right: 8px;
-    }
+        .course-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            overflow: hidden;
+            text-align: left;
+            height: min-content;
+        }
+
+        .course-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .course-content {
+            padding: 16px;
+        }
+
+        .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000;
+            margin: 8px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 0.95em;
+            margin-left: 8px;
+        }
+
+        .discount {
+            color: #e74c3c;
+            font-weight: bold;
+            float: right;
+            font-size: 0.95em;
+            margin-top: 4px;
+        }
+
+        .buy-btn {
+            display: block;
+            background-color: #1086C7;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 16px 0;
+            font-weight: bold;
+        }
+
+        .buy-btn:hover {
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .course-includes {
+            border-top: 1px solid #ddd;
+            padding: 16px;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .course-includes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .course-includes li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .course-includes li i {
+            color: #1086C7;
+            margin-right: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .course-section {
+                flex-direction: column;
+                padding: 2rem;
+                align-items: center;
+            }
+
+            .tab-wrapper {
+                width: 100%;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .tab {
+                flex: 1 1 45%;
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .tab-content {
+                max-width: 100%;
+            }
+
+            .course-card {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .tab {
+                flex: 1 1 100%;
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .tab-content p,
+            .tab-content ul li {
+                font-size: 13px;
+            }
+
+            .course-section {
+                padding: 1rem;
+            }
+
+            .course-card {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar Start -->
+
     <!-- Navbar Start -->
     <div class="container-fluid" style="position: sticky; z-index: 1000; background-color: #fff; top:0;">
         <div class="row border-top px-xl-5">
@@ -189,11 +267,11 @@
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
                         <!-- <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1> -->
-                        <img src="img/logo/pi_logo_2.png" alt="" width="50px" class="py-1">
+                        <img src="img/logo/pi_logo_2.png" alt="" width="100px" class="py-1">
 
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                         <i class="fas fa-bars text-dark"></i>
+                        <i class="fas fa-bars text-dark"></i>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mx-auto"> <!-- CHANGED from py-0 to mx-auto -->
@@ -213,11 +291,7 @@
         </div>
     </div>
     <!-- Navbar End -->
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar End -->
+
 
 
     <!-- Header Start -->
@@ -241,78 +315,275 @@
     <div class="course-section">
         <div class="tab-wrapper">
             <div class="tabs">
-                <button class="tab active" data-tab="home">JEE Foundation</button>
-                <button class="tab" data-tab="profile">NEET Foundation</button>
-                <button class="tab" data-tab="settings">JEE (Main + Advance)</button>
-                <button class="tab" data-tab="settings">NEET Regular</button>
-                <button class="tab" data-tab="settings">Science</button>
+                <button class="tab active" data-tab="Jee">JEE Foundation</button>
+                <button class="tab" data-tab="NEET">NEET Foundation</button>
+                <button class="tab" data-tab="Jee Main">JEE (Main + Advance)</button>
+                <button class="tab" data-tab="NEET Reg">NEET Regular</button>
+                <button class="tab" data-tab="science">Science</button>
             </div>
 
-            <div class="tab-content" id="home">Welcome to Home Tab Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Reiciendis possimus enim ullam eos hic in, natus expedita sed nihil vitae odio. Laborum nesciunt
-                consequatur officiis exercitationem quis sequi tenetur facilis accusantium inventore, temporibus
-                reprehenderit dolor id, cumque voluptates. Vitae cupiditate aperiam laboriosam in, voluptates ex soluta
-                dolorem qui nemo exercitationem nisi eum ratione sequi? Quis, dolore fugiat! Possimus eos atque sint
-                praesentium nobis molestiae vel vero? Vel, optio illum, ipsa quas, ex adipisci minima blanditiis
-                mollitia commodi tempore magni sunt suscipit ad exercitationem quia maxime unde! Voluptates officia
-                animi molestiae quaerat, eveniet maxime! Qui doloremque delectus dolor, voluptatem iure cumque error,
-                amet corrupti, debitis perferendis quo at dignissimos minima rerum quae veniam sapiente? Modi sint
-                quisquam dolore velit dolorem impedit suscipit a laboriosam aut molestias, eius laudantium ratione
-                facilis, natus ullam doloribus odio atque pariatur ad nostrum officia dolor veritatis. Ducimus quas eum
-                similique ullam recusandae quis ab dolore fugiat harum maxime vero repellendus voluptatum nisi, maiores
-                dicta deserunt doloremque cum est ex aut labore autem, modi inventore. Laudantium delectus autem itaque
-                ipsum excepturi soluta maiores aliquid cum fuga corporis, facere id quia voluptas nemo quos ipsa at
-                iste. Dolor libero ab nam quis fuga ratione voluptas obcaecati commodi sunt iure ullam, ipsum adipisci
-                fugit natus dolore dignissimos cum aperiam. Molestiae, praesentium voluptatem. Quas, soluta consequatur.
-                Error perspiciatis quos labore eius earum ipsa quas, suscipit consectetur quaerat ratione ea molestiae
-                similique molestias perferendis sequi veniam enim numquam minus porro, debitis accusantium sit est culpa
-                nobis. Pariatur dolor sequi id delectus quas suscipit neque laudantium qui commodi vel quis dolores
-                ipsam ea unde nesciunt recusandae adipisci, asperiores, soluta nemo incidunt a, saepe consectetur vero
-                eligendi. Architecto laudantium porro accusamus laboriosam eum possimus earum officia voluptatibus nobis
-                perferendis, eos natus eius alias quos illo pariatur delectus! Blanditiis vel autem harum at iste aut
-                necessitatibus officia placeat. Illum hic eos minima minus, velit ab quisquam, nulla vero, eum
-                recusandae architecto alias numquam libero quaerat aspernatur distinctio totam possimus ullam harum
-                tempora. Aspernatur, labore. Officiis numquam voluptatibus placeat iste repudiandae eaque ut atque
-                delectus unde, reprehenderit, nam hic, aperiam neque nihil non aspernatur necessitatibus nostrum vitae
-                officia cupiditate nesciunt suscipit! Qui ratione cumque dolorem pariatur hic. In, distinctio! Numquam
-                sint nesciunt, obcaecati mollitia rerum, recusandae tempore voluptatem deleniti quos amet iste tenetur
-                consequuntur voluptate repudiandae aspernatur. Molestiae doloremque vel porro magni consectetur?
-                Cupiditate ipsa, accusantium sit similique enim ullam sequi aut sapiente quae vero officia fugit omnis,
-                quam fuga pariatur velit consequuntur esse officiis quod corporis eos cum est. Ratione possimus alias
-                aut incidunt tempora, harum repudiandae ipsa suscipit velit sunt aliquid earum optio consequatur dolore
-                saepe expedita? Quisquam ipsum sapiente molestiae. Exercitationem odit explicabo molestiae dolorum ipsum
-                qui iure totam beatae culpa suscipit expedita molestias laborum deleniti, illo amet a possimus, ex sit?
-                Delectus doloribus, eius molestias reiciendis quia voluptatum minima illo ullam dolor explicabo, sunt
-                deserunt. Sint eaque vel adipisci tempore, dolorum maiores quam odit sunt quas rerum dolore optio quae
-                quos, aspernatur temporibus. Nisi optio, dolorum consectetur distinctio nostrum provident veritatis?
+            <div class="tab-content" id="Jee">
+                <h3>Course Overview</h3>
+                <p>The JEE Foundation Course is designed specifically for students of Classes 9 and 10 who aspire to
+                    build a strong base for engineering entrance exams like JEE Main and JEE Advanced. This early
+                    preparation program focuses on strengthening core concepts in Physics, Chemistry, and Mathematics,
+                    while developing problem-solving skills and logical reasoning from a young age.</p>
+                <p>Through a carefully planned curriculum, interactive learning methods, and regular assessments, the
+                    JEE Foundation Course helps students develop the confidence and academic discipline necessary to
+                    tackle advanced topics in higher classes. By introducing exam-oriented thinking early, students can
+                    gradually adapt to the competitive environment and reduce the pressure during their senior secondary
+                    years.</p>
+                <p>Enrolling in the JEE Foundation coaching empowers learners to clarify fundamentals, improve
+                    analytical ability, and stay ahead in the journey toward admission into India’s top engineering
+                    institutions like IITs and NITs.</p>
+                <section>
+                    <h5>Key Highlights</h5>
+                    <ul>
+                        <li>Foundation-level concepts with advanced thinking approach</li>
+                        <li>Interactive classroom learning and practice worksheets</li>
+                        <li>Regular tests and performance analysis</li>
+                        <li>Personal guidance to develop conceptual clarity</li>
+                        <li>Focus on building problem-solving habits early</li>
+                        <li>Preparation aligned with school curriculum</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Who Should Enroll</h5>
+                    <p>This program is ideal for:</p>
+                    <ul>
+                        <li>Students of Class 9 and 10 interested in engineering careers</li>
+                        <li>Learners who wish to strengthen their fundamentals early</li>
+                        <li>Students planning to prepare for JEE Main and Advanced later</li>
+                        <li>Young aspirants looking for structured and guided learning</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Learning Outcomes</h5>
+                    <ul>
+                        <li>Strong foundation in PCM subjects</li>
+                        <li>Improved reasoning and analytical skills</li>
+                        <li>Early familiarity with exam patterns and question types</li>
+                        <li>Confidence to tackle advanced topics in higher classes</li>
+                    </ul>
+                </section>
             </div>
-            <div class="tab-content" id="profile" style="display: none;">This is your Profile</div>
-            <div class="tab-content" id="settings" style="display: none;">Adjust your Settings here</div>
+            <div class="tab-content" id="NEET" style="display: none;">
+                <h3>Course Overview</h3>
+                <p>The NEET Foundation Course is specially designed for students of Classes 9 and 10 who aspire to
+                    pursue careers in medicine. This early preparation program focuses on building a strong conceptual
+                    base in Biology, Physics, and Chemistry, along with enhancing logical reasoning and analytical
+                    skills. By introducing core scientific concepts in a gradual and structured manner, the course
+                    empowers students to develop clarity and confidence before entering higher secondary education.
+                </p>
+                <p>Through interactive learning, engaging study materials, and regular assessments, the NEET Foundation
+                    Course helps young aspirants adapt to a competitive mindset from an early stage. This approach not
+                    only supports their school academics but also prepares them mentally for the rigorous demands of
+                    NEET in the future.</p>
+                <p>Enrolling in the NEET Foundation coaching enables students to strengthen fundamentals, improve
+                    problem-solving abilities, and gain a head start toward realizing their dream of becoming a
+                    healthcare professional.</p>
+                <section>
+                    <h5>Key Highlights</h5>
+                    <ul>
+                        <li>Foundation-level concepts with focus on clarity and understanding</li>
+                        <li>Interactive lessons and practice worksheets</li>
+                        <li>Regular tests and performance analysis reports</li>
+                        <li>Guidance to develop a competitive mindset early</li>
+                        <li>Alignment with school curriculum and NEET preparation path</li>
+                        <li>Personal mentorship and doubt-solving sessions</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Who Should Enroll</h5>
+                    <p>This program is ideal for:</p>
+                    <ul>
+                        <li>Class 9 and 10 students interested in medical careers</li>
+                        <li>Learners who wish to strengthen science fundamentals early</li>
+                        <li>Students planning to prepare for NEET after Class 10</li>
+                        <li>Aspirants seeking structured and guided foundation coaching</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Learning Outcomes</h5>
+                    <ul>
+                        <li>Clear understanding of core scientific principles</li>
+                        <li>Improved reasoning and problem-solving abilities</li>
+                        <li>Early familiarity with exam patterns and question types</li>
+                        <li>Confidence to tackle advanced topics in Class 11 and 12</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="tab-content" id="Jee Main" style="display: none;">
+                <h3>Course Overview</h3>
+                <p>The Joint Entrance Examination (JEE) is one of India’s most prestigious and competitive engineering
+                    entrance exams, conducted for admission into top engineering institutions such as the Indian
+                    Institutes of Technology (IITs), National Institutes of Technology (NITs), and other centrally
+                    funded technical institutions. Divided into two stages—JEE Main and JEE Advanced—the exam tests
+                    students on Physics, Chemistry, and Mathematics, assessing their problem-solving skills, analytical
+                    thinking, and conceptual understanding. JEE Main is conducted by the National Testing Agency (NTA)
+                    and serves as the qualifying exam for JEE Advanced, which is required for admission to the IITs.</p>
+                <p>Appearing for JEE is a significant milestone for students aspiring to become engineers in India. With
+                    lakhs of candidates appearing every year, the competition is intense, requiring strong academic
+                    preparation and consistent practice. Many students start preparing as early as Class 9 or 10, often
+                    enrolling in coaching institutes to gain an edge. Clearing the JEE not only opens doors to premier
+                    engineering colleges but also builds a strong foundation for careers in technology, innovation, and
+                    research both in India and globally.</p>
+
+                <section>
+                    <h5>Key Highlights</h5>
+                    <ul>
+                        <li>Comprehensive coverage of JEE Main and Advanced syllabus</li>
+                        <li>Special doubt-solving and problem practice sessions</li>
+                        <li>Regular topic-wise and full-length mock tests</li>
+                        <li>Personal mentorship and performance tracking</li>
+                        <li>Experienced faculty with proven success records</li>
+                        <li>Digital resources and detailed study materials</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Who Should Enroll</h5>
+                    <p>This program is ideal for:</p>
+                    <ul>
+                        <li>Students of Class 11 and 12 targeting IITs and NITs</li>
+                        <li>Aspirants committed to advanced-level preparation</li>
+                        <li>Learners aiming to excel in both JEE Main and Advanced</li>
+                        <li>Students seeking structured coaching and regular evaluation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Learning Outcomes</h5>
+                    <ul>
+                        <li>In-depth conceptual clarity in PCM subjects</li>
+                        <li>Strong analytical and application skills</li>
+                        <li>Confidence to solve high-difficulty problems under exam conditions</li>
+                        <li>Strategic exam techniques and time management</li>
+                        <li>Readiness for top engineering entrance exams</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="tab-content" id="NEET Reg" style="display: none;">
+                <h3>Course Overview</h3>
+                <p>NEET (National Eligibility cum Entrance Test) is the only national-level entrance exam in India for
+                    admission into MBBS, BDS, AYUSH, and other medical courses in both government and private medical
+                    colleges. Conducted by the National Testing Agency (NTA), NEET assesses students on their knowledge
+                    of Physics, Chemistry, and Biology based on the NCERT syllabus of Classes 11 and 12. With over 20
+                    lakh students appearing each year, NEET is considered one of the most competitive and important
+                    exams for aspiring doctors in India.</p>
+                <p>NEET plays a vital role in shaping the future of students who dream of serving in the medical field.
+                    Success in NEET opens doors to top medical colleges like AIIMS, JIPMER, and state-run institutions
+                    across the country. Preparing for NEET requires a strong conceptual foundation, regular revision,
+                    and practice through mock tests and previous years’ question papers. More than just a test, NEET is
+                    a stepping stone toward a noble profession dedicated to healthcare, compassion, and lifelong
+                    learning.</p>
+                <section>
+                    <h5>Key Highlights</h5>
+                    <ul>
+                        <li>Comprehensive coverage of NEET syllabus with NCERT focus</li>
+                        <li>Regular topic-wise and full-length mock tests</li>
+                        <li>Detailed doubt-solving and revision sessions</li>
+                        <li>One-to-one mentorship and performance tracking</li>
+                        <li>Special exam techniques and time management strategies</li>
+                        <li>Experienced faculty with proven success records</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Who Should Enroll</h5>
+                    <p>This program is ideal for:</p>
+                    <ul>
+                        <li>Class 11 and 12 students targeting NEET</li>
+                        <li>Aspirants who want structured coaching for medical entrance</li>
+                        <li>Learners aiming for top medical colleges like AIIMS and JIPMER</li>
+                        <li>Students seeking thorough preparation and consistent evaluation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h5>Learning Outcomes</h5>
+                    <ul>
+                        <li>Strong command over Physics, Chemistry, and Biology concepts</li>
+                        <li>Confidence to solve NEET-level questions accurately</li>
+                        <li>Improved analytical and time management skills</li>
+                        <li>Exam readiness for India’s top medical entrance tests</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="tab-content" id="science" style="display: none;">
+                <h3>Course Overview</h3>
+                <p>The Science stream in 11th and 12th grade is one of the most popular and career-focused academic
+                    paths in higher secondary education. It is divided into two main branches: Medical (Physics,
+                    Chemistry, Biology) and Non-Medical (Physics, Chemistry, Mathematics). This stream builds a strong
+                    foundation in scientific concepts and logical reasoning, preparing students for competitive exams
+                    like NEET, JEE, CET, and others. Apart from core subjects, students also study English and may opt
+                    for additional subjects like Computer Science or Physical Education, depending on their school.</p>
+                <p>Choosing the Science stream opens up a wide range of career opportunities in fields such as
+                    engineering, medicine, biotechnology, pharmacy, research, data science, architecture, and pure
+                    sciences. Students learn not only theory but also practical applications through lab sessions,
+                    experiments, and projects. These two years are crucial for building academic discipline, analytical
+                    thinking, and a clear vision for future goals. With the right guidance, dedication, and preparation,
+                    the Science stream lays the groundwork for a successful and fulfilling professional journey.</p>
+
+                <h5>Key Highlights</h5>
+                <ul>
+                    <li>Personal attention with limited batch size</li>
+                    <li>Regular weekly tests and performance tracking</li>
+                    <li>Digital classrooms with interactive learning tools</li>
+                    <li>Special preparation for NEET, JEE, CET exams</li>
+                    <li>One-to-one parent-teacher meetings</li>
+                    <li>Experienced and qualified faculty team</li>
+                </ul>
+
+                <h5>Who Should Enroll</h5>
+                <p>This program is ideal for:</p>
+                <ul>
+                    <li>Students enrolled in 11th or 12th Science stream (Medical or Non-Medical)</li>
+                    <li>Learners who want strong conceptual clarity in core science subjects</li>
+                    <li>Students aiming to excel in board exams and build a solid academic foundation</li>
+                    <li>Those looking for structured coaching and continuous evaluation</li>
+                </ul>
+
+                <h5>Learning Outcomes</h5>
+                <ul>
+                    <li>Comprehensive understanding of Physics, Chemistry, and Biology/Mathematics concepts</li>
+                    <li>Improved analytical and problem-solving skills</li>
+                    <li>Practical knowledge through lab sessions and experiments</li>
+                    <li>Enhanced academic discipline and exam readiness for 11th and 12th board exams</li>
+                </ul>
+            </div>
         </div>
- <div class="course-card">
-    <img src="img/11th PCB.jpg" alt="Course Image" />
-    <div class="course-content">
-      <div class="price">
-        $549.00
-        <span class="old-price">$3,499.00</span>
-        <!-- <span class="discount">85% off</span> -->
-      </div>
-      <a href="#" class="buy-btn">Buy Now</a>
+        <div class="course-card">
+            <img src="img/Neet Preparation.jpg" alt="Course Image" />
+            <div class="course-content">
+                <div class="price">
+                    Pay Fee After Result
+                    <!-- <span class="old-price">$3,499.00</span> -->
+                    <!-- <span class="discount">85% off</span> -->
+                </div>
+                <a href="contact.html" class="buy-btn">Contact Now</a>
+            </div>
+            <div class="course-includes">
+                <strong>This course includes:</strong>
+                <ul>
+                    <li><i class="fas fa-flask"></i> Focus on Science Stream Only</li>
+                    <li><i class="fas fa-user-tie"></i> Mentor per Batch</li>
+                    <li><i class="fas fa-clipboard-list"></i> Weekly Exam</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Qualified Faculties</li>
+                    <li><i class="fas fa-user-friends"></i> Personal Attention</li>
+                    <li><i class="fas fa-users"></i> Limited Students' Batch</li>
+                    <li><i class="fas fa-microchip"></i> Optional Subjects (CS/Electronics)</li>
+                    <li><i class="fas fa-handshake"></i> One to One Parents Meeting</li>
+
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="course-includes">
-      <strong>This course includes:</strong>
-      <ul>
-        <li><i class="fas fa-video"></i>65 hours on-demand video</li>
-        <li><i class="fas fa-download"></i>49 downloadable resources</li>
-        <li><i class="fas fa-mobile-alt"></i>Access on mobile and TV</li>
-        <li><i class="fas fa-file-alt"></i>86 articles</li>
-        <li><i class="fas fa-code"></i>6 coding exercises</li>
-        <li><i class="fas fa-certificate"></i>Certificate of completion</li>
-      </ul>
-    </div>
-  </div>
-    </div>
-   
+
 
     <!-- Footer Start -->
     <div class="container-fluid text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px; background-color: #1b130c;">
