@@ -6810,6 +6810,7 @@ a.close.disabled {
 .student-card .score-banner{
   width: 80px;
   font-size: 14px;
+  top: 50px;
 }
 .student-name{
   margin-top: 10px;
@@ -6848,7 +6849,8 @@ a.close.disabled {
   }
 
   .carousel-item .bg-image {
-    height: 680px;
+    height: 800px;
+    background-position: center;
   }
 }
 
