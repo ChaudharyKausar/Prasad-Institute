@@ -25,7 +25,15 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -39,67 +47,66 @@
 
 
     <style>
-
-/* ----------------------------------------------------
+        /* ----------------------------------------------------
 Video testimonail
 ----------------------------------------------------- */
-.video-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem 4rem 7rem;
-    }
-
-    .video-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-card video {
-      width: 100%;
-      height: 460px;
-      display: block;
-       object-fit: cover;
-       object-position: center;
-    }
-
-    .video-card-footer {
-      padding: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #1086C7;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .video-card-footer button {
-      background: rgba(255, 255, 255, 0.15);
-      border: none;
-      padding: 6px 12px;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 13px;
-    }
-
-    .video-card-footer button:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    @media screen and (max-width:450px) {
         .video-section {
-        grid-template-columns: repeat(auto-fit, 1fr);
-        padding: 2rem;
-    }
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 3rem 4rem 7rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 460px;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .video-card-footer {
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1086C7;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .video-card-footer button {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            padding: 6px 12px;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .video-card-footer button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media screen and (max-width:450px) {
+            .video-section {
+                grid-template-columns: repeat(auto-fit, 1fr);
+                padding: 2rem;
+            }
+        }
 
         /*--------------------------------------------------------------
 # Testimonials Section
@@ -238,13 +245,14 @@ Video testimonail
             min-height: 560px;
             border-radius: 8px;
         }
-        #customers-testimonials .item .shadow-effect{
+
+        #customers-testimonials .item .shadow-effect {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-        
+
         #customers-testimonials .shadow-effect {
             padding: 20px;
         }
@@ -286,24 +294,25 @@ Video testimonail
             margin: 0 -2px;
             color: #FDCF00;
         }
-     
-        .owl-theme .owl-dots .owl-dot span{
+
+        .owl-theme .owl-dots .owl-dot span {
             width: 14px;
             height: 14px;
             background-color: #1086C7;
             opacity: 0.6;
             margin: 1;
         }
-           .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
-             background-color: #1086C7;
+
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background-color: #1086C7;
             opacity: 1;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navbar Start -->
+    <div class="cursor"></div>
     <!-- Navbar Start -->
     <div class="container-fluid" style="position: sticky; z-index: 1000; background-color: #fff; top:0;">
         <div class="row border-top px-xl-5">
@@ -340,9 +349,11 @@ Video testimonail
                         <img src="img/logo/pi_logo_2.png" alt="" width="100px" class="py-1">
 
                     </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                         <i class="fas fa-bars text-dark"></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mx-auto"> <!-- CHANGED from py-0 to mx-auto -->
                             <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -356,11 +367,6 @@ Video testimonail
                         <a class="btn btn-primary py-2 px-4 d-none d-lg-block mt-2" href="contact.html">Contact Now</a>
                     </div>
 
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar End -->
                 </nav>
             </div>
         </div>
@@ -383,42 +389,43 @@ Video testimonail
     </div>
     <!-- Header End -->
 
- <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-1" style="letter-spacing: .20px;">Real Feedback – Real Transformation</h5>
-                <h2>Video Testimonials</h2>
-            </div>
+    <div class="text-center mb-5">
+        <h5 class="text-primary text-uppercase mb-1" style="letter-spacing: .20px;">Real Feedback – Real Transformation
+        </h5>
+        <h2>Video Testimonials</h2>
+    </div>
     <section class="video-section">
-  <!-- Video 1 -->
-  <div class="video-card">
-    <video controls>
-      <source src="img/Review Video 1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-card-footer">
-      <span>Students Share Their Feedback</span>
-      <!-- <button onclick="window.open('img/Review Video 1.mp4', '_blank')">Visit site</button> -->
-    </div>
-  </div>
+        <!-- Video 1 -->
+        <div class="video-card">
+            <video controls>
+                <source src="img/Review Video 1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-card-footer">
+                <span>Students Share Their Feedback</span>
+                <!-- <button onclick="window.open('img/Review Video 1.mp4', '_blank')">Visit site</button> -->
+            </div>
+        </div>
 
-  <!-- Video 2 -->
-  <div class="video-card">
-    <video controls>
-      <source src="img/Review Video 2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-card-footer">
-      <span>Parent Feedback</span>
-      <!-- <button onclick="window.open('https://example.com', '_blank')">Explore</button> -->
-    </div>
-  </div>
-</section>
+        <!-- Video 2 -->
+        <div class="video-card">
+            <video controls>
+                <source src="img/Review Video 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-card-footer">
+                <span>Parent Feedback</span>
+                <!-- <button onclick="window.open('https://example.com', '_blank')">Explore</button> -->
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonial Section -->
     <section class="testimonials">
-          <div class="text-center mb-5">
-        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonial</h5>
-        <h1>What Say Our Students</h1>
-      </div>
+        <div class="text-center mb-5">
+            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonial</h5>
+            <h1>What Say Our Students</h1>
+        </div>
         <div class="container">
             <div id="customers-testimonials" class="owl-carousel owl-theme">
 
@@ -444,7 +451,7 @@ Video testimonail
                 </div>
 
                 <!-- Testimonial 2 -->
-                 <div class="item">
+                <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
                         <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
@@ -465,7 +472,7 @@ Video testimonail
                 </div>
 
                 <!-- Testimonial 3 -->
-                 <div class="item">
+                <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
                         <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
@@ -486,7 +493,7 @@ Video testimonail
                 </div>
 
                 <!-- Testimonial 4 -->
-                 <div class="item">
+                <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
                         <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
@@ -507,7 +514,7 @@ Video testimonail
                 </div>
 
                 <!-- Testimonial 5 -->
-                 <div class="item">
+                <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
                         <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
@@ -528,7 +535,7 @@ Video testimonail
                 </div>
 
                 <!-- Testimonial 6 -->
-                 <div class="item">
+                <div class="item">
                     <div class="shadow-effect">
                         <img class="img-circle" src="img/Students/SHRAVANI NARVEKAR 1.jpg" alt="">
                         <p>My experience at Prasad Institute during 11th and 12th was truly memorable. The disciplined,
@@ -576,6 +583,10 @@ Video testimonail
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="course.html"><i class="fa fa-angle-right mr-2"></i>Course</a>
+                    <a class="text-white mb-2" href="alumini.html"><i class="fa fa-angle-right mr-2"></i>Alumni</a>
+                    <a class="text-white mb-2" href="event.html"><i class="fa fa-angle-right mr-2"></i>Events</a>
+                    <a class="text-white mb-2" href="result.html"><i class="fa fa-angle-right mr-2"></i>Result</a>
                     <a class="text-white mb-2" href="gallery.html"><i class="fa fa-angle-right mr-2"></i>Gallery</a>
                     <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
@@ -630,31 +641,19 @@ Video testimonail
         </div>
     </div>
     <!-- Footer End -->
-<!-- Back to Top -->
+    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
-    <!-- <script>
-        $('#testiCarousel').carousel({
-    interval: false
-});
-    </script> -->
 
     <script>
         jQuery(document).ready(function ($) {
@@ -684,6 +683,10 @@ Video testimonail
         });
 
     </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
