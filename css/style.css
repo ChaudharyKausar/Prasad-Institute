@@ -11108,6 +11108,26 @@ h6,
 }
 
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 18px;
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.whatsapp-float:hover{
+  transform: scale(1.1);
+}
+
 
 .cursor {
   width: 20px;
@@ -11239,8 +11259,8 @@ h6,
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
   /* background-image: url('img/page-header.jpg'); */
-  /* background-size: cover; */
-  object-fit: contain;
+  background-size: cover;
+  height: 380px;
 }
 
 .cat-item img {
