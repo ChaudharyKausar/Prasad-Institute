@@ -1,3 +1,20 @@
+
+
+document.body.classList.add("no-scroll");
+
+  window.addEventListener("load", function () {
+    // Fade out loader
+    const loader = document.getElementById("preloader");
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+
+    // Enable scroll and show main content
+    document.body.classList.remove("no-scroll");
+    document.getElementById("main-content").style.display = "block";
+  });
+
+
+
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
