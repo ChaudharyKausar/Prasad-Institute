@@ -15,23 +15,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
+        // SMTP Configuration
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'kausar.mastersenterprise@gmail.com';
-        $mail->Password   = 'ctjk tyhx ecly jjvs';
+        $mail->Username   = 'kausar.mastersenterprise@gmail.com'; // <-- Apna Gmail yaha daal
+        $mail->Password   = 'ctjk tyhx ecly jjvs';   // <-- App Password daal
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
+        // Sender & Receiver
         $mail->setFrom('kausar.mastersenterprise@gmail.com', 'Website Contact');
-        $mail->addAddress('kausar.mastersenterprise@gmail.com');
+        $mail->addAddress('kausar.mastersenterprise@gmail.com'); // Ya jisko mail bhejna hai
 
+        // Content
         $mail->isHTML(false);
         $mail->Subject = $subject;
         $mail->Body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 
         $mail->send();
-        echo "Message sent successfully!";
+        echo "Message sent successfully.";
     } catch (Exception $e) {
         echo "Message could not be sent. Error: {$mail->ErrorInfo}";
     }
