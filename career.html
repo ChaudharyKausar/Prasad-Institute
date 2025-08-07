@@ -246,11 +246,11 @@
   <div class="container-fluid page-header" style="margin-bottom: 30px;">
     <div class="container">
       <div class="d-flex flex-column justify-content-center" style="min-height: 380px">
-        <h3 class="display-4 text-white text-uppercase">Events</h3>
+        <h3 class="display-4 text-white text-uppercase">Career</h3>
         <div class="d-inline-flex text-white">
           <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
           <i class="fa fa-angle-double-right pt-1 px-3"></i>
-          <p class="m-0 text-uppercase">Events</p>
+          <p class="m-0 text-uppercase">Career</p>
         </div>
       </div>
     </div>
@@ -258,175 +258,50 @@
   <!-- Header End -->
 
 
-  <!-- Event List -->
-  <div class="event-list">
-    <div class="text-center">
-      <h5 class="text-primary text-uppercase mb-1" style="letter-spacing: .20px;">Inspiring Learning, Building
-        Connections, and Celebrating Achievements</h5>
-      <h2>Events & Activities</h2>
-    </div>
-    <!-- Event 1 -->
-    <div class="event">
-      <div class="event-date">
-        <!-- <span>JUN</span> -->
-        <div class="number">2024</div>
-      </div>
-      <div class="event-content">
-        <div class="event-image">
-          <img src="img/Career Guidance Seminar.jpeg" alt="Event 1">
-        </div>
-        <div class="event-details">
-          <h3>Career Guidance Seminar</h3>
-          <p>At Prasad Institute, we regularly organize a variety of educational and career-focused events to empower
-            our students. These events are thoughtfully designed to inspire learning, build confidence, and provide
-            practical guidance for a successful future.
-          </p>
-          <strong>Our Events Include:</strong>
-          <ul>
-            <li>Career Guidance Seminars – Helping students explore the right career options with expert advice.</li>
-            <li>Skill Development Workshops – Enhancing essential skills and preparing for real-world challenges.</li>
-            <li>Motivational Talks & Expert Sessions – Learning from achievers and industry professionals.</li>
-          </ul>
+ <!-- Save this as career.html -->
+  
+<form id="careerForm" action="mail/career.php" method="post" enctype="multipart/form-data" class="p-4 rounded bg-white" style="max-width: 600px; margin: auto;">
+    <h4 class="mb-4 text-center text-primary">Join Our Team</h4>
 
-          <p>These programs offer valuable insights and opportunities to interact with experienced mentors and
-            counselors. We believe that such events play a crucial role in shaping well-rounded individuals and
-            preparing them for success.</p>
-
-          <!-- <a href="#">View Event Details →</a> -->
-        </div>
-      </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
     </div>
 
-    <!-- Event 2 -->
-    <div class="event">
-      <div class="event-date">
-        <div class="number">2025</div>
-      </div>
-      <div class="event-content">
-        <div class="event-image">
-          <img src="img/Parents Meeting.jpeg" alt="Event 2">
-        </div>
-        <div class="event-details">
-          <h3>Combined Parent Meeting
-          </h3>
-          <p>At Prasad Institute, we believe in building strong partnerships with parents to support every child’s
-            growth. Our Combined Parent Meetings are organized to keep parents informed about academic progress, overall
-            development, and future goals. These sessions create an open platform for meaningful discussions between
-            teachers, parents, and students.</p>
-          <strong>What Happens in the Meeting:</strong>
-          <ul>
-            <li>Detailed review of student performance and attendance</li>
-            <li>Feedback and suggestions from teachers</li>
-            <li>Guidance on how parents can support learning at home</li>
-            <li>Discussion on upcoming academic plans and activities</li>
-          </ul>
-
-          <strong>Why Attend:
-          </strong>
-          <ul>
-            <li>Understand your child’s strengths and areas of improvement</li>
-            <li> Clarify doubts and set clear goals together</li>
-            <li>Strengthen collaboration between parents and faculty</li>
-          </ul>
-        </div>
-      </div>
+    <div class="mb-3">
+        <label for="number" class="form-label">Mobile Number</label>
+        <input type="tel" name="number" class="form-control" placeholder="Enter your phone number" required>
     </div>
 
-    <!-- Event 3 -->
-    <div class="event">
-      <div class="event-date">
-        <div class="number">2025</div>
-      </div>
-      <div class="event-content">
-        <div class="event-image">
-          <img src="img/Admission Counseling.jpeg" alt="Event 2">
-        </div>
-        <div class="event-details">
-          <h3>Admission Counseling
-          </h3>
-          <p>At Prasad Institute, we regularly conduct Admission Counseling sessions to help students and parents make
-            informed decisions about their education. These sessions are designed to provide complete clarity on
-            available courses, eligibility requirements, and the step-by-step admission process.</p>
-          <p>Our expert counselors guide you at every stage, from understanding career prospects to filling out
-            application forms accurately. With personalized advice, you can confidently plan your academic journey and
-            choose the right path for your future success.
-
-          </p>
-          <strong>Highlights of the Counseling Session:</strong>
-          <ul>
-            <li>Personalized course and career guidance</li>
-            <li>Complete information on eligibility and admission steps</li>
-            <li>Assistance with documentation and application forms</li>
-            <li>One-on-one doubt clearing with experienced counselors</li>
-          </ul>
-
-        </div>
-      </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Your Age</label>
+        <input type="number" name="age" class="form-control" placeholder="Enter your age" required>
     </div>
 
-    <!-- Event 4 -->
-    <div class="event">
-      <div class="event-date">
-        <div class="number">2025</div>
-      </div>
-      <div class="event-content">
-        <div class="event-image">
-          <img src="img/Class Anniversary Celebration.jpeg" alt="Event 2">
-        </div>
-        <div class="event-details">
-          <h3>Class Anniversary Celebration
-          </h3>
-          <p>At Prasad Institute, we celebrate the Class Anniversary to honor the journey, achievements, and memories
-            shared by every batch. This special occasion strengthens bonds among students, teachers, and parents while
-            recognizing milestones reached together.</p>
-          <p>The celebration creates a positive environment where everyone comes together to reflect on progress, share
-            experiences, and inspire the next phase of learning and growth. It’s a proud moment that builds a sense of
-            belonging and motivation.
-
-          </p>
-          <strong>Highlights:</strong>
-          <ul>
-            <li>Felicitation of outstanding performers</li>
-            <li>Sharing success stories and memories</li>
-            <li>Fun activities, cultural performances, and games</li>
-            <li>Interaction with faculty and fellow students</li>
-          </ul>
-
-        </div>
-      </div>
+    <div class="mb-3">
+        <label for="profile" class="form-label">Profile Applying For</label>
+        <input type="text" name="profile" class="form-control" placeholder="Eg: Physics Faculty, Admin, etc." required>
     </div>
 
-    <!-- Event 5 -->
-    <div class="event">
-      <div class="event-date">
-        <div class="number">2025</div>
-      </div>
-      <div class="event-content">
-        <div class="event-image">
-          <img src="img/Motivational Movie Break.jpeg" alt="Event 2">
-        </div>
-        <div class="event-details">
-          <h3>Motivational Movie Break
-          </h3>
-          <p>At Prasad Institute, we organize Motivational Movie Breaks to inspire students with powerful stories and
-            real-life examples of determination, courage, and success. Watching such films together helps students
-            relax, reflect, and recharge their minds in a positive environment.</p>
-          <p>These sessions are designed to combine learning with entertainment, encouraging students to adopt valuable
-            life lessons and stay motivated to achieve their goals. It’s a refreshing break that leaves a lasting
-            impact.</p>
-          <strong>Highlights of the Movie Break:</strong>
-          <ul>
-            <li>Screening of inspiring movies and documentaries</li>
-            <li>Group discussions to share thoughts and learnings</li>
-            <li>Fun and interactive activities after the movie</li>
-            <li>Creating a positive and motivating atmosphere</li>
-          </ul>
-
-        </div>
-      </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-control" placeholder="example@example.com" required>
     </div>
 
-  </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">About Yourself</label>
+        <textarea name="message" rows="4" class="form-control" placeholder="Write a brief about yourself" required></textarea>
+    </div>
+
+    <div class="mb-4">
+        <label for="resume" class="form-label">Upload Resume (PDF or DOC)</label>
+        <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 fw-bold">Submit Application</button>
+</form>
+
+
 
 
 
